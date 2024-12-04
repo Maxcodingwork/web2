@@ -1,0 +1,146 @@
+/* Basic Styling for Navigation Bar */
+body {
+    font-family: Arial, sans-serif;
+}
+
+nav {
+    background-color: #333;
+    overflow: hidden;
+}
+
+.navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar li {
+    float: left;
+}
+
+.navbar li a {
+    display: block;
+    color: white;
+    padding: 14px 20px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.navbar li a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* Modal Styling */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 30%;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover, .close:focus {
+    color: black;
+    cursor: pointer;
+}
+
+input[type="text"], input[type="password"], input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    margin: 10px 0;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Basic styles for the slideshow */
+.slideshow-container {
+    position: relative;
+    width: 80%;
+    max-width: 600px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.slideshow-container img {
+    width: 100%;
+    display: none;
+}
+
+.slideshow-container img.active {
+    display: block;
+}
+
+/* Arrow styles */
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.arrow.left {
+    left: -50px;
+}
+
+.arrow.right {
+    right: -50px;
+}
+
+/* Dot styles */
+.dots {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.dots span {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    background-color: #ddd;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.dots span.active {
+    background-color: #333;
+}
