@@ -1,5 +1,5 @@
 async function fetchData() {
-    const url = 'http://sn3-sfo.data-di.com/api/v2/sfo/section/recommend?org_id=taiwan202103&access_token=01768d12-9cd8-11ef-bfd2-42010a8c0037';
+    const url = 'https://sn3-sfo.data-di.com/api/v2/sfo/section/recommend?org_id=taiwan202103&access_token=01768d12-9cd8-11ef-bfd2-42010a8c0037';
     
     const headers = {
       "Content-Type": "application/json",
