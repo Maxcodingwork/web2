@@ -9,8 +9,7 @@ async function fetchData() {
     const body = JSON.stringify({
       log_id: "WXCA059A3D84AF05C6",
       section_id: "section_id_6325531414157",
-      identity_id_map: {"$identity_login_id": "reg_distinct_id_16859"},
-      need_sticky_item: true
+      identity_id_map: {"$identity_login_id": "reg_distinct_id_16859"}
     });
   
     try {
