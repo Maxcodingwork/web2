@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DAWHO 數位帳戶</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="sinopac_style.css">
+  <script>    
+    //此段代码的作用是将SDK主文件未加载完成时，业务代码中调用的API依次进行放到数组q中缓存，等待SDK主文件加载完成后，再取出，并执行。
+    (function(win, export_obj) {
+        win['LogAnalyticsObject'] = export_obj;
+        if (!win[export_obj]) {
+            var _collect = function() {
+                _collect.q.push(arguments);
+            }
+            _collect.q = _collect.q || [];
+            win[export_obj] = _collect;                
+        }
+        win[export_obj].l = +new Date();
+    })(window, 'collectEvent');
+    </script>
+    <script async src="https://lf3-data.volccdn.com/obj/data-static/log-sdk/collect/5.0/collect-privity-v5.2.6.js"></script>
+    <script src="https://unpkg.com/gmp-resource-sdk@0.0.2-alpha.17/dist/gmp-resource-sdk.js"></script>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="logo">
+        <img src="https://placehold.co/40x40/FFD700/FFF?text=DA" alt="DAWHO Logo">
+        DAWHO
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#features">功能</a></li>
+          <li><a href="#highlights">優惠</a></li>
+          <li><a href="#investments">投資</a></li>
+          <li><a href="#download">APP下載</a></li>
+          <li><a href="#contact">聯絡我們</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="hero">
+      <h1>新世代VIP 數位帳戶</h1>
+      <p>銀行、證券一次開足，輕鬆投資 大大滿足<br>交割戶仍享最高1.5%活儲優利</p>
+      <button class="cta-btn">立即申請開戶</button>
+    </section>
+    <section class="container features" id="features">
+      <div class="feature">
+        <div class="feature-icon">💰</div>
+        <div class="feature-title">存款</div>
+        <div>臺幣、外幣存款，換匯優利定存</div>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">💳</div>
+        <div class="feature-title">消費</div>
+        <div>DAWHO信用卡、多幣Debit卡、自動扣繳</div>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">🏧</div>
+        <div class="feature-title">提款轉帳</div>
+        <div>國內外提款、轉帳、提升帳戶權限</div>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">📈</div>
+        <div class="feature-title">投資與保險</div>
+        <div>基金、ibrAin智能理財、美股、大戶投、保險</div>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">🏠</div>
+        <div class="feature-title">貸款</div>
+        <div>信貸、房貸、私房錢</div>
+      </div>
+    </section>
+    <section class="container highlights" id="highlights">
+      <div class="highlight">
+        <div class="highlight-value">1.5%</div>
+        <div>新臺幣活儲30萬以內年利率<br><small>每天都能賺取利息</small></div>
+      </div>
+      <div class="highlight">
+        <div class="highlight-value">100元</div>
+        <div>新臺幣就能投資優質企業<br><small>小額投資零負擔</small></div>
+      </div>
+      <div class="highlight">
+        <div class="highlight-value">8%</div>
+        <div>最高國外信用卡現金回饋<br><small>刷卡就享現金回饋</small></div>
+      </div>
+      <div class="highlight">
+        <div class="highlight-value">20次</div>
+        <div>跨行提款＆轉帳每月最高優惠<br><small>轉帳及無卡提款都OK</small></div>
+      </div>
+    </section>
+    <section class="container investments" id="investments">
+      <h2>多種投資方式任你選</h2>
+      <div class="investment-list">
+        <div class="investment-item">
+          <div>DAWHO基金定期定額</div>
+          <div>手續費0元起</div>
+        </div>
+        <div class="investment-item">
+          <div>ibrAin智能理財</div>
+          <div>股債平衡，智能佈局</div>
+        </div>
+        <div class="investment-item">
+          <div>大戶投</div>
+          <div>買台股，股息、利息你都有</div>
+        </div>
+        <div class="investment-item">
+          <div>美股投資</div>
+          <div>成為夢想企業的股東</div>
+        </div>
+      </div>
+    </section>
+    <section id="gmp-resource-section">
+      <h2 style="text-align: center;">這裡是SDK渲染資源位</h2>
+      <div class="resource_container">
+      </div>
+    </section>  
+    <section class="awards-download" id="download">
+      <div class="awards">
+        <h3>榮獲多項大獎</h3>
+        <ul>
+          <li>德國 iF 設計獎</li>
+          <li>金融菁業獎 最佳數位金融獎</li>
+          <li>The Asian Banker－Best Digital Account Opening</li>
+          <li>哈佛商業評論－數位轉型鼎格獎</li>
+        </ul>
+      </div>
+      <div class="download">
+        <img src="https://placehold.co/120x120/FFD700/FFF?text=APP" alt="DAWHO APP" style="border-radius:16px; margin-bottom:1rem;">
+        <div>請至APP store下載DAWHO APP</div>
+        <a class="download-btn" href="https://sinopac.page.link/dawhoapp" target="_blank">下載DAWHO APP</a>
+        <div style="margin-top:0.5rem; color:#888; font-size:0.95rem;">iOS V1.23.0、Android V1.23.0</div>
+      </div>
+    </section>
+  </main>
+  <footer id="contact">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h4>聯絡我們</h4>
+        <ul>
+          <li>銀行客服專線：(02)2505-9999、0203-08989</li>
+          <li>信用卡客服：(02)2528-7776、0800-058-888</li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>公司資訊</h4>
+        <ul>
+          <li>永豐商業銀行股份有限公司</li>
+          <li>統一編號：86517384</li>
+          <li>登記地址：臺北市中山區南京東路3段36號</li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>法定公告</h4>
+        <ul>
+          <li>存款人存保權益法定公告事項</li>
+          <li>隱私權保護聲明</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      © 永豐銀行版權所有 | 謹慎理財 信用至上
+    </div>
+  </footer> 
+  <script src="sinopac_script.js"></script>
+</body>
+</html> 
