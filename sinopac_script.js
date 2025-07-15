@@ -30,7 +30,7 @@ window.collectEvent('start'); // 通知SDK设置完毕，可以真正开始发�
   });
 
   // 資源位ID，請替換為你在GMP後台配置的resourceId
-  const ResourceId = 'd9121c48cb6f3b01695dea2e6dfecba5';
+  const resourceId = 'd9121c48cb6f3b01695dea2e6dfecba5';
 
   // 創建資源位視圖
   let resourceView = sdk.createResourceView('.resource_container', {
@@ -49,5 +49,5 @@ window.collectEvent('start'); // 通知SDK设置完毕，可以真正开始发�
   });
 
   // 載入資源位
-  resourceView.loadResource(ResourceId);
+  resourceView.loadResource(resourceId);
 
