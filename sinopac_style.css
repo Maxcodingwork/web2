@@ -254,11 +254,16 @@ footer {
   font-size: 0.9rem;
   margin-top: 2rem;
 }
+#gmp-resource-section {
+  text-align: center;
+}
 .resource_container {
+  display: inline-block;
   width: 280px;
   height: 250px;
   margin-left: auto;
-  display: flex;
+  margin-right: auto;
+  /* keep flex if you want to center content inside */
   justify-content: center;
   align-items: center;
 }
