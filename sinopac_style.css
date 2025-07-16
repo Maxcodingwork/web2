@@ -255,12 +255,11 @@ footer {
   margin-top: 2rem;
 }
 .resource_container {
-  width: 336px;
-  height: 300px;
-  margin-right: auto;
+  width: 280px;
+  height: 250px;
   display: flex;
   justify-content: center;
-  align-items: center
+  align-items: center;
 }
 @media (max-width: 900px) {
   .features, .investment-list {
