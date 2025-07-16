@@ -21,7 +21,7 @@ window.collectEvent('start'); // 通知SDK设置完毕，可以真正开始发�
     host: 'https://ma.altatech.tw', 
     appid: 3, // number
     uuid: '576709241931300878', 
-    idType: 'base_id', // 根據實際情況設置
+    idType: 'baseid', // 根據實際情況設置
     webId: '576709241931300878',
     onEvent: function(eventName, eventParams) {
       // 這裡調用你自己的事件上報方法
