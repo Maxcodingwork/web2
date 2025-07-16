@@ -257,6 +257,10 @@ footer {
 .resource_container {
   width: 336px;
   height: 300px;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center
 }
 @media (max-width: 900px) {
   .features, .investment-list {
