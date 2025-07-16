@@ -257,6 +257,7 @@ footer {
 .resource_container {
   width: 280px;
   height: 250px;
+  margin-left: auto;
   display: flex;
   justify-content: center;
   align-items: center;
