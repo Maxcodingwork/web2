@@ -40,6 +40,7 @@ window.collectEvent('start'); // 通知SDK设置完毕，可以真正开始发�
     backgroundSize: "cover",
     onClick: function(item, index) { 
       // 點擊回調，可自定義上報
+      console.log(item,index);
       window.collectEvent('resource_click', { item, index });
     },
     onShow: function(item, index) { 
