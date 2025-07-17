@@ -45,7 +45,6 @@ window.collectEvent('start'); // 通知SDK设置完毕，可以真正开始发�
       if (item.navigate_url) {
       window.open(item.navigate_url, '_blank');
       }
-},
     },
     onShow: function(item, index) { 
       // 曝光回調，可自定義上報
