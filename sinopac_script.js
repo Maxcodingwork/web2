@@ -1,12 +1,3 @@
-document.addEventListener('DOMContentLoaded', function() {
-  var ctaBtn = document.querySelector('.cta-btn');
-  if (ctaBtn) {
-    ctaBtn.addEventListener('click', function() {
-      alert('感謝您的申請！(此為示範訊息)');
-    });
-  }
-});
-
 window.collectEvent('init', {
   app_id: 10000004, // 参考2.1节获取，注意类型是number而非字符串
   channel_domain: 'https://cdp.altatech.tw', // 设置私有化部署数据上送地址，参考2.2节获取
@@ -31,6 +22,7 @@ window.collectEvent('start'); // 通知SDK设置完毕，可以真正开始发�
 
   // 資源位ID，請替換為你在GMP後台配置的resourceId
   const resourceId = 'd9121c48cb6f3b01695dea2e6dfecba5';
+  const resourceId2 = 'b591913591725ab3a0ea54493404ecb0';
 
   // 創建資源位視圖
   let resourceView = sdk.createResourceView('.resource_container', {
@@ -49,6 +41,33 @@ window.collectEvent('start'); // 通知SDK设置完毕，可以真正开始发�
     },
   });
 
+
+  let resourceView2 = sdk.createResourceView('.resource_container2', {
+    showPagination: true, 
+    autoScroll: true, 
+    autoScrollTimeInterval: 3,
+    backgroundSize: "cover",
+    onClick: function(item, index) { 
+      if (item.navigate_url) {
+        window.open(item.navigate_url, '_blank');
+      }
+    },
+    onShow: function(item, index) {
+    },
+  });
   // 載入資源位
+
+
   resourceView.loadResource(resourceId);
+  resourceView.loadResource(ResourceId2);
+
+document.addEventListener('DOMContentLoaded', function() {
+  var ctaBtn = document.querySelector('.cta-btn');
+  if (ctaBtn) {
+    ctaBtn.addEventListener('click', function() {
+      alert('感謝您的申請！(此為示範訊息)');
+      window.collectEvent('apply_test', {});
+    });
+  }
+});
 
