@@ -257,15 +257,30 @@ footer {
 #gmp-resource-section {
   text-align: center;
 }
+#gmp-resource-section .resource-group {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;
+  margin-top: 1rem;
+}
 .resource_container {
   display: inline-block;
   width: 280px;
   height: 250px;
-  margin-left: auto;
-  margin-right: auto;
-  /* keep flex if you want to center content inside */
+  margin: 0;  
   justify-content: center;
   align-items: center;
+  /* 若要內容置中可加 flex 設定 */
+}
+.resource_container2 {
+  display: inline-block;
+  width: 395px;
+  height: 250px;
+  margin: 0;
+  justify-content: center;
+  align-items: center;
+  /* 若要內容置中可加 flex 設定 */
 }
 @media (max-width: 900px) {
   .features, .investment-list {
