@@ -59,7 +59,7 @@ window.collectEvent('start'); // 通知SDK设置完毕，可以真正开始发�
 
 
   resourceView.loadResource(resourceId);
-  resourceView.loadResource(ResourceId2);
+  resourceView.loadResource(resourceId2);
 
 document.addEventListener('DOMContentLoaded', function() {
   var ctaBtn = document.querySelector('.cta-btn');
