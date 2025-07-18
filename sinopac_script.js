@@ -41,7 +41,8 @@ window.collectEvent('start'); // 通知SDK设置完毕，可以真正开始发�
     },
   });
 
-
+  resourceView.loadResource(resourceId);
+  
   let resourceView2 = sdk.createResourceView('.resource_container2', {
     showPagination: true, 
     autoScroll: true, 
@@ -58,15 +59,15 @@ window.collectEvent('start'); // 通知SDK设置完毕，可以真正开始发�
   // 載入資源位
 
 
-  resourceView.loadResource(resourceId);
+  
   resourceView.loadResource(resourceId2);
 
 document.addEventListener('DOMContentLoaded', function() {
   var ctaBtn = document.querySelector('.cta-btn');
   if (ctaBtn) {
     ctaBtn.addEventListener('click', function() {
-      alert('感謝您的申請！(此為示範訊息)');
       window.collectEvent('apply_test', {});
+      alert('感謝您的申請！(此為示範訊息)');
     });
   }
 });
