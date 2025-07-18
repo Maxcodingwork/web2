@@ -265,7 +265,7 @@ footer {
   margin-top: 1rem;
 }
 .resource_container {
-  display: inline-block;
+  display: flex;
   width: 280px;
   height: 250px;
   margin: 0;  
@@ -274,7 +274,7 @@ footer {
   /* 若要內容置中可加 flex 設定 */
 }
 .resource_container2 {
-  display: inline-block;
+  display: flex;
   width: 395px;
   height: 250px;
   margin: 0;
