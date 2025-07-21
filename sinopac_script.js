@@ -40,7 +40,9 @@ window.collectEvent('start'); // 通知SDK设置完毕，可以真正开始发�
       // 曝光回調，可自定義上報
     },
   });
-  
+
+  resourceView.loadResource(resourceId);
+
   let resourceView2 = sdk.createResourceView('.resource_container2', {
     showPagination: true, 
     autoScroll: true, 
@@ -54,10 +56,7 @@ window.collectEvent('start'); // 通知SDK设置完毕，可以真正开始发�
     onShow: function(item, index) {
     },
   });
-  // 載入資源位
 
-
-  resourceView.loadResource(resourceId);
   resourceView2.loadResource(resourceId2);
 
 document.addEventListener('DOMContentLoaded', function() {
