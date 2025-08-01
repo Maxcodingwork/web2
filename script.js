@@ -1,3 +1,4 @@
+//Home page login function
 function initLoginSignupFeature() {
     // Get the modals
     var loginModal = document.getElementById("loginModal");
@@ -51,7 +52,7 @@ function initLoginSignupFeature() {
 }
 
 
-
+// Banner page banner function
 function initSlideshowFeature() {
     // JavaScript for Slideshow
     let currentIndex = 0;
@@ -120,6 +121,66 @@ function initSlideshowFeature() {
 
 
 
+// --------------- Feature: Questionnaire Form for Popup Page ---------------
+function initQuestionnaireFeature() {
+    const questionForm = document.getElementById("questionForm");
+    const resultImageContainer = document.getElementById("resultImage");
+    const imageElement = document.getElementById("image");
+    const resultScoreElement = document.getElementById("result-score")
+    const redoButton = document.getElementById("redoButton");
+
+    if (!questionForm) {
+        console.warn("Questionnaire form not found on this page.");
+        return; // Exit if the form is not found
+    }
+
+    questionForm.addEventListener("submit", function (event) {
+        event.preventDefault(); // Prevent the page from refreshing
+
+        // Calculate total score from checked checkboxes
+        const checkboxes = document.querySelectorAll(".question:checked");
+        let totalScore = 0;
+
+        checkboxes.forEach((checkbox) => {
+            const score = parseInt(checkbox.getAttribute("data-score"), 10);
+            totalScore += score;
+        });
+
+        resultScoreElement.textContent = '你的分數是:'+totalScore+'分';
+
+        // Determine the target image based on the score
+        let imageSrc = "";
+        if (totalScore <= 22) {
+            imageSrc = "哥布林砲灰(18-22).png"; // Replace with your low-score image URL
+        } 
+        else if (totalScore <= 30) {
+            imageSrc = "哥布林士兵(23-30).png"; // Replace with your medium-score image URL
+        } 
+        else if (totalScore <= 40) {
+            imageSrc = "哥布林隊長(31-40).png"; // Replace with your medium-score image URL
+        } 
+        else if (totalScore <= 49) {
+            imageSrc = "哥布林長老(41-50).png"; // Replace with your medium-score image URL
+        } 
+        else {
+            imageSrc = "尤達大師(大於50).png"; // Replace with your high-score image URL
+        }
+
+        // Display the result image
+        imageElement.src = imageSrc;
+        imageElement.alt = `Score-based image for score: ${totalScore}`;
+        resultImageContainer.style.display = "block";
+
+
+        form.addEventListener("reset", () => {
+            // Reset result score and hide the target image
+            resultScoreElement.textContent = 0;
+            imageElement.style.display = "none";
+        });
+    });
+}
+
+
 
 // --------------- Initialize Features Based on Page ---------------
 document.addEventListener('DOMContentLoaded', () => {
@@ -131,5 +192,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (currentPath.includes('banner.html')) {
         initSlideshowFeature();
+    }
+
+    if (currentPath.includes('popup.html')) {
+        initQuestionnaireFeature();
     }
 });
