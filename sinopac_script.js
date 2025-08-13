@@ -15,13 +15,14 @@ window.collectEvent('start'); // 通知SDK设置完毕，可以真正开始发�
     idType: 'baseid', // 根據實際情況設置
     webId: '576709241931300878',
     onEvent: function(eventName, eventParams) {
+      eventParams.activity_id = '';
       window.collectEvent(eventName, eventParams);
     }
   });
 
   // 資源位ID，請替換為你在GMP後台配置的resourceId
-  const resourceId = 'd9121c48cb6f3b01695dea2e6dfecba5';
-  const resourceId2 = 'b591913591725ab3a0ea54493404ecb0';
+  const resourceId = '6d32f02b6f200f82c783f5d8cd7d435d';
+
 
   // 創建資源位視圖
   let resourceView = sdk.createResourceView('.resource_container', {
@@ -42,21 +43,6 @@ window.collectEvent('start'); // 通知SDK设置完毕，可以真正开始发�
 
   resourceView.loadResource(resourceId);
 
-  let resourceView2 = sdk.createResourceView('.resource_container2', {
-    showPagination: true, 
-    autoScroll: true, 
-    autoScrollTimeInterval: 3,
-    backgroundSize: "cover",
-    onClick: function(item, index) { 
-      if (item.navigate_url) {
-        window.open(item.navigate_url, '_blank');
-      }
-    },
-    onShow: function(item, index) {
-    },
-  });
-
-  resourceView2.loadResource(resourceId2);
 
 document.addEventListener('DOMContentLoaded', function() {
   var ctaBtn = document.querySelector('.cta-btn');
