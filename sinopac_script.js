@@ -15,7 +15,7 @@ window.collectEvent('start'); // 通知SDK设置完毕，可以真正开始发�
     idType: 'baseid', // 根據實際情況設置
     webId: '576709241931300878',
     onEvent: function(eventName, eventParams) {
-      eventParams.activity_id = '';
+      // eventParams.activity_id = '';
       window.collectEvent(eventName, eventParams);
     }
   });
